@@ -1,0 +1,10 @@
+//TODO: register "cpp" tag to "CPPPolicyElement" interface in file third_party/blink/renderer/core/html/html_tag_names.json5
+
+[
+	Exposed = Window,
+	HTMLConstructor
+] interface CPPParserElement : HTMLElement {
+	[CEReactions, Reflect] attribute USVString src;		//identifying the path of source policy file
+	[CEReactions] attribute DOMString type;				//identifying the type of this tag: external or inline
+	[CEReactions] attribute DOMString text;				//the inline policy directives(if any)
+};
